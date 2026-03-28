@@ -22,7 +22,7 @@ jobs:
           node-version: 20
           cache: 'pnpm'
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: ./.github/actions/setup-pnpm.sh
       - name: Install dependencies
         run: pnpm install
       - name: Build landing page
