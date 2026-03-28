@@ -1,0 +1,233 @@
+Build a production-grade dashboard frontend in React + TypeScript that is meant to be an integrated part of an existing product frontend.
+
+Important:
+- Keep the same visual language, spacing, hierarchy, and premium product feel as the existing frontend/landing page.
+- This task is only for the dashboard UI structure.
+- Do not focus on backend integration yet.
+- Do not hardcode business logic into the UI.
+- Use mock placeholders and typed sample objects only where needed to shape components.
+- The main goal is to produce a clean visual structure that I can plug real data into later.
+
+Stack:
+- React + TypeScript + Vite
+- TailwindCSS
+- shadcn/ui
+- lucide-react
+- recharts
+- framer-motion only if it genuinely improves UX
+- no Docker
+
+Design direction:
+- modern
+- minimal
+- premium
+- consistent with the existing landing page
+- clear visual hierarchy
+- strong spacing
+- soft cards
+- rounded corners
+- clean typography
+- visually impressive without clutter
+- responsive desktop-first, but works on tablet/mobile
+
+What to generate:
+Create only the dashboard frontend structure and reusable components.
+
+Dashboard requirements:
+
+1. Overall layout
+Create a full dashboard shell with:
+- left sidebar
+- top header
+- main content area
+- responsive collapse behavior
+- consistent spacing and alignment
+
+Sidebar should include:
+- logo/wordmark area
+- nav items
+- active state styling
+- optional grouped sections
+- bottom utility area for settings/profile placeholder
+
+Top header should include:
+- page title
+- optional subtitle/breadcrumb
+- search or filter placeholder
+- action buttons placeholder
+- profile/avatar placeholder
+
+2. Main dashboard page structure
+Create a polished dashboard page with these sections:
+
+A. Summary / KPI row
+A top row of cards for:
+- overall score
+- current band
+- decision
+- expected profitability
+- evidence score
+- risk penalty
+
+These should be presentational cards only, with placeholder props and polished styling.
+
+B. Main score / status area
+A prominent hero area for:
+- main 0..1 score visualization
+- optimal range indicator
+- current status badge
+- supporting metrics
+
+This should feel like the most important block on the page.
+
+C. Normalized features section
+A section for displaying feature-level information with:
+- feature name
+- raw value
+- normalized value
+- feature score
+- weight
+- curve type
+
+Build this as a reusable table/card structure that can later receive real data.
+
+D. Profitability curves section
+Create a section to visually display example profitability curves using reusable chart components.
+Design the layout so I can later plug in:
+- curve line
+- current position marker
+- labels
+- legends
+- tooltips
+
+E. Optimal range section
+A section for:
+- range min/max
+- in-range status
+- distance to center
+- static vs empirical source
+- mini visualization of the current score against the range
+
+F. Penalties section
+A clean UI block for:
+- penalty breakdown
+- total penalty
+- severity indicators
+- descriptive labels
+
+G. Decision summary / explainability section
+A section for:
+- decision state
+- reason codes
+- explanation list
+- actionability or confidence badge
+
+H. Historical / trend section
+A section reserved for historical charts such as:
+- score trend over time
+- band distribution
+- penalty trend
+- feature drift
+
+This only needs structural chart containers and realistic mock data shape.
+
+3. Components
+Create reusable components for the dashboard, such as:
+- DashboardShell
+- Sidebar
+- DashboardHeader
+- KPIGrid
+- KPICard
+- ScoreHeroCard
+- ScoreGauge
+- StatusBadge
+- FeatureTable
+- FeatureCard
+- ProfitabilityCurveCard
+- OptimalRangeCard
+- PenaltyBreakdownCard
+- DecisionSummaryCard
+- ExplanationList
+- HistoricalTrendCard
+- SectionHeader
+
+Keep components small, typed, and reusable.
+
+4. Data shaping
+Do not connect to a backend.
+Instead:
+- define clean TypeScript interfaces for the dashboard data
+- create a small mock object with placeholder values
+- pass data into components through props
+- structure everything so I can replace the mock data with real API data later without changing the UI architecture
+
+5. Charts
+Use Recharts for chart containers and examples.
+Requirements:
+- clean and minimal
+- readable axes
+- useful tooltips
+- no visual clutter
+- no overloaded charts
+- one chart purpose per card
+
+6. Styling expectations
+- match the product’s existing frontend style
+- dashboard must feel like part of the same product, not a separate admin template
+- avoid generic bootstrap/admin appearance
+- cards should feel premium
+- use whitespace intentionally
+- use subtle borders/shadows
+- strong section hierarchy
+- polished hover states where appropriate
+
+7. UX expectations
+- make the layout easy to scan
+- prioritize the score and decision area
+- maintain visual consistency across all cards
+- include empty/default placeholder states where useful
+- support future interactivity without implementing the full logic yet
+
+8. Code quality
+- TypeScript throughout
+- clean component props
+- no monolithic files
+- good folder structure
+- readable and production-grade
+- avoid unnecessary abstractions
+- separate layout, presentational components, and mock data
+
+Suggested folder structure:
+- /src
+  - /components
+    - /dashboard
+      - DashboardShell.tsx
+      - Sidebar.tsx
+      - DashboardHeader.tsx
+      - KPIGrid.tsx
+      - KPICard.tsx
+      - ScoreHeroCard.tsx
+      - ScoreGauge.tsx
+      - FeatureTable.tsx
+      - ProfitabilityCurveCard.tsx
+      - OptimalRangeCard.tsx
+      - PenaltyBreakdownCard.tsx
+      - DecisionSummaryCard.tsx
+      - ExplanationList.tsx
+      - HistoricalTrendCard.tsx
+      - SectionHeader.tsx
+  - /data
+    - dashboardMockData.ts
+  - /types
+    - dashboard.ts
+  - /pages
+    - DashboardPage.tsx
+
+9. Final output
+Return:
+- the full dashboard page structure
+- reusable components
+- typed mock data
+- a cohesive layout ready for later data integration
+
+The result should feel like a real premium product dashboard demo, not a placeholder wireframe.
