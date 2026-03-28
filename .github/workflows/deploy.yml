@@ -1,5 +1,4 @@
-      - name: Add pnpm to PATH
-        run: echo "$(pnpm bin)" >> $GITHUB_PATH
+
 name: Deploy to GitHub Pages
 
 on:
@@ -27,6 +26,8 @@ jobs:
         uses: pnpm/action-setup@v3
         with:
           version: 8
+      - name: Add pnpm to PATH
+        run: echo "$(pnpm bin)" >> $GITHUB_PATH
       - name: Install dependencies
         run: pnpm install
       - name: Build landing page
