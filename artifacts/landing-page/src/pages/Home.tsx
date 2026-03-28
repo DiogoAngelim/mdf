@@ -721,12 +721,31 @@ const FAQSection = () => {
 const CTASection = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-      setEmail("");
+    if (!email) return;
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        setEmail("");
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -755,10 +774,12 @@ const CTASection = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 bg-background"
+                disabled={loading}
               />
-              <Button type="submit" size="lg" className="w-full sm:w-auto shadow-lg shadow-primary/25">
-                Request Early Access
+              <Button type="submit" size="lg" className="w-full sm:w-auto shadow-lg shadow-primary/25" disabled={loading}>
+                {loading ? "Submitting..." : "Request Early Access"}
               </Button>
+              {error && <p className="w-full text-sm text-red-400 mt-1">{error}</p>}
             </form>
           ) : (
             <motion.div 
