@@ -1,3 +1,5 @@
+      - name: Install pnpm (fallback)
+        run: npm install -g pnpm
 name: Deploy to GitHub Pages
 
 on:
