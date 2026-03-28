@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 20
       - name: Install pnpm
-        run: npm install -g pnpm@8
+        run: npm install -g pnpm@9.9.0
       - name: Verify pnpm
         run: pnpm --version
       - name: Install dependencies
