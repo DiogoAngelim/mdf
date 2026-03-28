@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - name: Install pnpm
         run: npm install -g pnpm@9.9.0
       - name: Verify pnpm
@@ -28,11 +28,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build landing page
+        env:
+          PORT: 4173
+          BASE_PATH: /${{ github.event.repository.name }}/
         run: pnpm --filter @workspace/landing-page build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: artifacts/landing-page/dist
+          path: artifacts/landing-page/dist/public
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
