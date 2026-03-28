@@ -1,0 +1,216 @@
+Build a polished, high-converting landing page for an MVP called Market Decision Framework.
+
+Context:
+- The backend and package architecture are already in good shape from Signal through Adaptor.
+- Do not rebuild the framework logic itself.
+- The goal here is the landing page for the MVP, not the internal engine.
+- The product reads portfolio stock recommendations and notifies users on buy and sell signals generated from normalized, near real-time price indicators.
+- Position the product as a decision-support system, not as a broker or automatic trading platform.
+- The page should feel trustworthy, modern, fast, and premium.
+- Primary audience: investors, analysts, and technically minded users who want clearer signal-driven portfolio actions.
+- Primary conversion goal: get users to join the waitlist or request early access.
+- Secondary conversion goal: get users to book a demo or see how it works.
+
+What to build:
+Create a responsive marketing site with:
+1. Hero section
+2. Problem / pain section
+3. Solution section
+4. “How it works” section
+5. Product benefits section
+6. Framework architecture preview section
+7. Example signal workflow section
+8. Social proof / credibility placeholders
+9. FAQ
+10. Final CTA
+11. Footer
+
+Core product message:
+“Reads portfolio stock recommendations and turns normalized, near real-time price indicators into clear buy and sell notifications.”
+
+Brand positioning:
+- Clear signals, less noise
+- Structured portfolio intelligence
+- Near real-time normalized indicators
+- Decision-ready outputs
+- Built on a modular framework: Signal → Pulse → Core → Action → Adaptor
+- Emphasize clarity, timing, discipline, and consistency
+- Avoid hype, avoid “guaranteed profits”, avoid unrealistic claims
+
+Tone:
+- Sophisticated
+- Confident
+- Clear
+- Conversion-oriented
+- Minimal jargon on the surface, but still intelligent
+- Financial-tech aesthetic, not crypto-hype aesthetic
+
+Design direction:
+- Premium SaaS landing page
+- Strong typography and spacing
+- Dark or neutral professional palette
+- Clean gradients allowed, but subtle
+- Elegant cards for sections
+- Smooth scroll
+- Sticky top nav
+- High-end dashboard-style mockup visuals using shapes/cards/charts/placeholders
+- Mobile-first responsive behavior
+- Strong visual hierarchy
+- Fast-loading and uncluttered
+
+Tech requirements:
+- Use a clean modern frontend stack suitable for Replit
+- Prefer React + Vite
+- Use Tailwind CSS
+- Keep code modular and readable
+- Create reusable components
+- Prepare content/data in arrays/objects where appropriate
+- No backend required unless needed for a mock waitlist form
+- If a waitlist form is included, use a local mock submit success state
+- Include subtle animations
+- Prioritize polished UX over excessive effects
+
+Page sections in detail:
+
+1. Hero
+Include:
+- Strong headline
+- Clear subheadline
+- Primary CTA: “Join Waitlist”
+- Secondary CTA: “See How It Works”
+- Right-side visual: product dashboard mockup showing portfolio symbols, signal state, confidence, normalized score, and buy/sell status
+
+Suggested messaging direction:
+Headline ideas should center around:
+- transforming noisy price movement into portfolio decisions
+- normalized indicators into decision-ready signals
+- knowing when to act with more structure
+
+2. Problem section
+Communicate these pain points:
+- Investors drown in noisy market movement
+- Raw price data does not translate directly into actionable decisions
+- Recommendation streams are fragmented
+- Timing buy/sell decisions consistently is difficult
+- It is hard to normalize signals across symbols and conditions
+
+3. Solution section
+Explain that the product:
+- Reads recommendation inputs
+- Processes normalized near real-time price indicators
+- Detects actionable buy/sell conditions
+- Outputs structured notifications
+- Helps users act with more consistency and less guesswork
+
+4. How it works
+Show a 5-step or 6-step flow:
+- Ingest portfolio recommendation inputs
+- Monitor near real-time market indicators
+- Normalize features into a predictable schema
+- Evaluate decision conditions
+- Generate buy/sell signals
+- Deliver notifications to the user
+
+5. Benefits section
+Include cards such as:
+- Less noise, more clarity
+- Structured buy/sell decisioning
+- Near real-time monitoring
+- Portfolio-aware signal delivery
+- Modular framework architecture
+- Faster reaction with more discipline
+
+6. Framework architecture preview
+Show the internal framework as a visual pipeline:
+Signal → Pulse → Core → Action → Adaptor
+
+For each module, add a short one-line explanation:
+- Signal: captures relevant market and portfolio inputs
+- Pulse: scores current opportunity conditions
+- Core: applies decision rules and determines action intent
+- Action: translates intent into executable decision states
+- Adaptor: publishes outputs into notification-ready channels
+
+Important:
+Do not overexplain implementation internals.
+This section should make the architecture feel robust and credible.
+
+7. Example workflow section
+Include a realistic example card:
+- Ticker: AAPL
+- Recommendation source: Portfolio watchlist
+- Normalized momentum: 0.82
+- Normalized volatility: 0.34
+- Opportunity score: High
+- Core decision: BUY
+- Notification status: Sent
+
+Also show another example with HOLD or SELL.
+
+8. Social proof / credibility placeholders
+Include placeholders for:
+- “Built on a modular decision framework”
+- “Designed for disciplined portfolio monitoring”
+- “Ready for MVP early adopters”
+- optional logo placeholders or testimonial placeholders
+
+9. FAQ
+Questions to include:
+- What does the product do?
+- Is this automatic trading?
+- How are signals generated?
+- What markets or assets will be supported?
+- How real-time is the monitoring?
+- Is this financial advice?
+- Who is this for?
+
+Important:
+Make clear it provides signals and notifications, not guaranteed outcomes or direct investment advice.
+
+10. Final CTA
+Strong close with concise copy and waitlist form.
+Encourage early access.
+
+11. Footer
+Include:
+- Product name
+- Short positioning line
+- Links: Features, How it works, FAQ, Join waitlist
+- Legal placeholders: Privacy, Terms, Disclaimer
+
+Copywriting requirements:
+Generate compelling landing page copy for all sections.
+The copy must be conversion-focused.
+Keep sentences tight and strong.
+Do not sound generic or empty.
+Do not use fake metrics.
+Do not use exaggerated claims like “beat the market”.
+Do include a tasteful disclaimer that the product provides informational decision support and is not financial advice.
+
+UX requirements:
+- Smooth anchor navigation
+- Buttons with hover states
+- Clean forms
+- Responsive cards and layouts
+- Good spacing on mobile
+- Accessible contrast
+- Semantic HTML where possible
+
+Output requirements:
+- Build the full page
+- Include all components and styles
+- Include placeholder logo/product name text
+- Include realistic mock data for charts/cards/tickers
+- Make the page production-quality in structure and presentation
+- Keep everything easy to edit later
+
+Nice-to-have additions:
+- Animated signal cards
+- Small chart visual in hero/dashboard mockup
+- Sticky CTA on mobile
+- Light entrance animations
+- Section reveal on scroll
+- Clean icon usage
+
+Deliverable:
+A complete, polished, responsive MVP landing page that is visually impressive and optimized for conversion, presenting the product as a trustworthy system for portfolio stock recommendation monitoring and buy/sell signal notifications based on normalized near real-time indicators.

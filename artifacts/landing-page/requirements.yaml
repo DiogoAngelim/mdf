@@ -1,0 +1,11 @@
+packages:
+  "framer-motion": "For premium scroll reveal animations and transitions"
+  "clsx": "For class merging in UI components"
+  "tailwind-merge": "For class merging in UI components"
+
+images: []
+
+notes:
+  - This is a pure marketing landing page with no backend dependencies.
+  - All form submissions (waitlist) are handled via local mock state.
+  - Using framer-motion for high-end scroll reveals to fit the premium fintech SaaS aesthetic.
